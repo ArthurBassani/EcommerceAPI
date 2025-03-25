@@ -28,7 +28,9 @@ public class Product {
     private String name;
     private String description;
     private BigDecimal price;
-    private BigInteger stock_quantity;
+
+    @Column(name = "stock_quantity")
+    private BigInteger stockQuantity;
 
     @OneToMany(mappedBy = "product")
     private Set<ProductShop> productShopping;
