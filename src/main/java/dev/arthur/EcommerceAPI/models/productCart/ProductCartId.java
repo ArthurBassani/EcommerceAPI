@@ -6,7 +6,7 @@ import jakarta.persistence.Embeddable;
 import java.util.UUID;
 
 @Embeddable
-public class ProductCartsId {
+public class ProductCartId {
 
     @Column(name = "id_product")
     private UUID productId;

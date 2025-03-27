@@ -1,5 +1,7 @@
 package dev.arthur.EcommerceAPI.models.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import dev.arthur.EcommerceAPI.models.address.Address;
 import dev.arthur.EcommerceAPI.models.cart.Cart;
 import dev.arthur.EcommerceAPI.models.favorite.Favorite;
@@ -34,6 +36,7 @@ public class User {
     private Date birthdate;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties()
     private Favorite favorite;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)

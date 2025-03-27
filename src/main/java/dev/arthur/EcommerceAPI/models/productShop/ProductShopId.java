@@ -1,4 +1,4 @@
-package dev.arthur.EcommerceAPI.models.productsShopping;
+package dev.arthur.EcommerceAPI.models.productShop;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

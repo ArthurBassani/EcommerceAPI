@@ -1,6 +1,6 @@
 package dev.arthur.EcommerceAPI.models.cart;
 
-import dev.arthur.EcommerceAPI.models.productCart.ProductCarts;
+import dev.arthur.EcommerceAPI.models.productCart.ProductCart;
 import dev.arthur.EcommerceAPI.models.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,9 +25,9 @@ public class Cart {
     private BigDecimal total_value;
 
     @OneToMany(mappedBy = "cart")
-    private Set<ProductCarts> productCarts;
+    private Set<ProductCart> productCarts;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_user", referencedColumnName = "id")
     private User user;
 

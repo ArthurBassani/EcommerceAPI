@@ -1,6 +1,6 @@
 package dev.arthur.EcommerceAPI.models.shop;
 
-import dev.arthur.EcommerceAPI.models.productsShopping.ProductShop;
+import dev.arthur.EcommerceAPI.models.productShop.ProductShop;
 import dev.arthur.EcommerceAPI.models.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

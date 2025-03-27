@@ -8,9 +8,9 @@ import java.math.BigInteger;
 
 @Entity
 @Table(name = "products_carts")
-public class ProductCarts {
+public class ProductCart {
     @EmbeddedId
-    private ProductCartsId id;
+    private ProductCartId id;
 
     @ManyToOne
     @MapsId("productId")

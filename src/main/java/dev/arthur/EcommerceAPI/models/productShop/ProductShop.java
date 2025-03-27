@@ -1,4 +1,4 @@
-package dev.arthur.EcommerceAPI.models.productsShopping;
+package dev.arthur.EcommerceAPI.models.productShop;
 
 import dev.arthur.EcommerceAPI.models.product.Product;
 import dev.arthur.EcommerceAPI.models.shop.Shop;

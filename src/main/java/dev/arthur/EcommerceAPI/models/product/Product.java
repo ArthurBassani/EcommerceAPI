@@ -2,8 +2,8 @@ package dev.arthur.EcommerceAPI.models.product;
 
 import dev.arthur.EcommerceAPI.models.favorite.Favorite;
 import dev.arthur.EcommerceAPI.models.productSale.ProductSale;
-import dev.arthur.EcommerceAPI.models.productCart.ProductCarts;
-import dev.arthur.EcommerceAPI.models.productsShopping.ProductShop;
+import dev.arthur.EcommerceAPI.models.productCart.ProductCart;
+import dev.arthur.EcommerceAPI.models.productShop.ProductShop;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -39,7 +39,7 @@ public class Product {
     private Set<ProductSale> productSales;
 
     @OneToMany(mappedBy = "product")
-    private Set<ProductCarts> productCarts;
+    private Set<ProductCart> productCarts;
 
     @ManyToMany(mappedBy = "products")
     private Set<Favorite> favorites;
