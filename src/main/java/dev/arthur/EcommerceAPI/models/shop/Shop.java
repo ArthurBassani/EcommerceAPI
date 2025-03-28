@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.ZonedDateTime;
 import java.util.Set;
 import java.util.UUID;
@@ -24,7 +25,16 @@ public class Shop {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private ZonedDateTime date;
-    private BigDecimal total_value;
+
+    @Column(name = "total_value")
+    private BigDecimal totalValue;
+
+    @Column(name = "created_at", updatable = false)
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
+
 
     @OneToMany(mappedBy = "shop")
     private Set<ProductShop> productShopping;

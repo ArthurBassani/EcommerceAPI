@@ -12,6 +12,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
 
@@ -28,6 +29,12 @@ public class Product {
     private String name;
     private String description;
     private BigDecimal price;
+
+    @Column(name = "created_at", updatable = false)
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
 
     @Column(name = "stock_quantity")
     private BigInteger stockQuantity;

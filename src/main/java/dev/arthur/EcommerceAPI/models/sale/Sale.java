@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.ZonedDateTime;
 import java.util.Set;
 import java.util.UUID;
@@ -25,7 +26,15 @@ public class Sale {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private ZonedDateTime date;
-    private BigDecimal total_value;
+
+    @Column(name = "total_value", updatable = false)
+    private BigDecimal totalValue;
+
+    @Column(name = "created_at")
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
 
     @ManyToOne
     @JoinTable(name = "id_address")

@@ -1,7 +1,5 @@
 package dev.arthur.EcommerceAPI.models.user;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import dev.arthur.EcommerceAPI.models.address.Address;
 import dev.arthur.EcommerceAPI.models.cart.Cart;
 import dev.arthur.EcommerceAPI.models.favorite.Favorite;
@@ -13,6 +11,8 @@ import lombok.Setter;
 import lombok.Getter;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+
+import java.time.Instant;
 import java.util.Date;
 import java.util.Set;
 import java.util.UUID;
@@ -35,8 +35,13 @@ public class User {
     private String phone;
     private Date birthdate;
 
+    @Column(name = "created_at", updatable = false)
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties()
     private Favorite favorite;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)

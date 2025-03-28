@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigInteger;
+import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
 
@@ -26,6 +27,12 @@ public class City {
 
     private BigInteger cep;
     private String name;
+
+    @Column(name = "created_at", updatable = false)
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
 
     @OneToMany(mappedBy = "city")
     private Set<Address> addresses;

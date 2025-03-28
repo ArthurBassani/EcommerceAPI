@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
 
@@ -23,6 +24,13 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private BigDecimal total_value;
+
+    @Column(name = "created_at", updatable = false)
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
+
 
     @OneToMany(mappedBy = "cart")
     private Set<ProductCart> productCarts;

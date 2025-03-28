@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigInteger;
+import java.time.Instant;
 import java.util.Set;
 import java.util.UUID;
 
@@ -26,7 +27,15 @@ public class Address {
     private String street;
     private BigInteger number;
     private String complement;
-    private String reference_point;
+
+    @Column(name = "reference_point")
+    private String referencePoint;
+
+    @Column(name = "created_at", updatable = false)
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    private Instant updatedAt;
 
     @OneToMany(mappedBy = "address")
     private Set<Sale> sales;
