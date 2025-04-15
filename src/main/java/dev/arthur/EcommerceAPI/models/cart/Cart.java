@@ -23,7 +23,9 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private BigDecimal total_value;
+
+    @Column(name = "total_value")
+    private BigDecimal totalValue;
 
     @Column(name = "created_at", updatable = false)
     private Instant createdAt;
@@ -38,5 +40,13 @@ public class Cart {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_user", referencedColumnName = "id")
     private User user;
+
+    public void increaseTotalValue(BigDecimal value){
+        this.totalValue = this.totalValue.add(value);
+    }
+
+    public void decreaseTotalValue(BigDecimal value){
+        this.totalValue = this.totalValue.subtract(value);
+    }
 
 }

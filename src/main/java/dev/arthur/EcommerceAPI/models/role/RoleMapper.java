@@ -1,5 +1,6 @@
 package dev.arthur.EcommerceAPI.models.role;
 
+import dev.arthur.EcommerceAPI.dtos.role.RoleResponseDTO;
 import org.springframework.stereotype.Component;
 
 @Component
