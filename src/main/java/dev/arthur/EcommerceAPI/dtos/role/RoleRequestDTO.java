@@ -1,4 +1,4 @@
-package dev.arthur.EcommerceAPI.models.role;
+package dev.arthur.EcommerceAPI.dtos.role;
 
 import lombok.Getter;
 import lombok.Setter;
