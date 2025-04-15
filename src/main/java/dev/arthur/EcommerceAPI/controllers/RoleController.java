@@ -1,8 +1,8 @@
 package dev.arthur.EcommerceAPI.controllers;
 
-import dev.arthur.EcommerceAPI.models.role.RoleDeletedDTO;
-import dev.arthur.EcommerceAPI.models.role.RoleRequestDTO;
-import dev.arthur.EcommerceAPI.models.role.RoleResponseDTO;
+import dev.arthur.EcommerceAPI.dtos.role.RoleDeletedDTO;
+import dev.arthur.EcommerceAPI.dtos.role.RoleRequestDTO;
+import dev.arthur.EcommerceAPI.dtos.role.RoleResponseDTO;
 import dev.arthur.EcommerceAPI.services.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

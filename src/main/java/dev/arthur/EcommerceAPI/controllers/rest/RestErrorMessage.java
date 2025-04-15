@@ -1,4 +1,4 @@
-package dev.arthur.EcommerceAPI.infra;
+package dev.arthur.EcommerceAPI.controllers.rest;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
