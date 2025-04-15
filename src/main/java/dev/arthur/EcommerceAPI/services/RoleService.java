@@ -1,5 +1,8 @@
 package dev.arthur.EcommerceAPI.services;
 
+import dev.arthur.EcommerceAPI.dtos.role.RoleDeletedDTO;
+import dev.arthur.EcommerceAPI.dtos.role.RoleRequestDTO;
+import dev.arthur.EcommerceAPI.dtos.role.RoleResponseDTO;
 import dev.arthur.EcommerceAPI.exceptions.role.RoleAlmostExistsException;
 import dev.arthur.EcommerceAPI.exceptions.role.RoleCantBeDeletedException;
 import dev.arthur.EcommerceAPI.exceptions.role.RoleNotFoundException;
